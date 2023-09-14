@@ -1,13 +1,12 @@
-# Your Project Name
-
-Briefly describe your project here.
+#  Personify API
+A simple REST API capable of CRUD operations on a "person" resource
+ 
 
 ## Table of Contents
 
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [Database](#database)
 - [Testing](#testing)
@@ -19,23 +18,31 @@ Briefly describe your project here.
 
 ## Getting Started
 
-Provide instructions on how to get your project up and running. Include information on prerequisites, installation steps, and any configuration required.
-
 ### Prerequisites
+All dependencies are in the [requirements.txt]("https://github.com/Ayamigah16/hngx-person-api/blob/main/person_api/requirements.txt") file
 
-List any prerequisites or dependencies that need to be installed before running the project. Include links to installation guides if available.
 
 ### Installation
+Use the steps below to run the personif-api locally
+* Clone the repository
+    git clone [hngx-person-api]("https://github.com/Ayamigah16/hngx-person-api/tree/main")
+* Navigate to the Project Directory
+    cd **person_api"
+* Activate the virtualenv
+    venv\Scripts\activate
+* Install Dependencies
+    pip install -r requirements.txt
+* Apply Database Migration
+    python manage.py migrate
+* Create a Superuser (optional)
+    python manage.py createsuperuser
+* Run the Development Server:
+    python manage.py runserver
 
-A step-by-step guide on how to install and set up your project. Use code snippets and terminal commands where necessary.
 
-## Usage
-
-Explain how to use your project, including any specific commands, configurations, or usage examples.
 
 ## API Endpoints
-
-Provide a list of the available API endpoints, their descriptions, and sample requests and responses. Include information on authentication if applicable.
+These are the list of the endpoints
 
 - `GET /api/`: List all persons.
 - `POST /api/`: Create a new person.
@@ -45,5 +52,8 @@ Provide a list of the available API endpoints, their descriptions, and sample re
 
 ### Sample Request
 
-```http
+```
+http
 GET /api/persons/Alice/
+```
+

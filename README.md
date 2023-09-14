@@ -37,11 +37,11 @@ Explain how to use your project, including any specific commands, configurations
 
 Provide a list of the available API endpoints, their descriptions, and sample requests and responses. Include information on authentication if applicable.
 
-- `GET /api/persons/`: List all persons.
-- `POST /api/persons/`: Create a new person.
-- `GET /api/persons/{name}/`: Retrieve details of a person by name.
-- `PUT /api/persons/{name}/`: Update details of a person by name.
-- `DELETE /api/persons/{name}/`: Delete a person by name.
+- `GET /api/`: List all persons.
+- `POST /api/`: Create a new person.
+- `GET /api/user_id/`: Retrieve details of a person by name.
+- `PUT /api/user_id/`: Update details of a person by name.
+- `DELETE /api/user_id/`: Delete a person by name.
 
 ### Sample Request
 

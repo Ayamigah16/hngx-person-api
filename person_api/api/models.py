@@ -1,22 +1,7 @@
-from django.db import models, phone
+from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 
 # Create your models here.
-class Address(models.Model):
-    """
-    Represents an address model.
-
-    Attributes:
-        street (CharField): The street or house number of the address.
-        city (CharField): The city of the address.
-        state (CharField): The state or region of the address.
-        zipcode (CharField): The postal code of the address.
-    """
-    street = models.CharField(max_length=255)
-    city = models.CharField(max_length=255)
-    state = models.CharField(max_length=255)
-    zipcode = models.CharField(max_length=10)
-
 class Person(models.Model):
     """
     Represents a person model with various details.
@@ -33,9 +18,3 @@ class Person(models.Model):
     dob = models.DateField(null=True, blank=True)
     email = models.EmailField(max_length=255, null=True, blank=True)
     phone_number = PhoneNumberField()
-    profile_picture = models.ImageField(upload_to='profile_pics/', null=True, blank=True)
-    person_address = models.OneToOneField(Address, on_delete=models.CASCADE, null=True, blank=True)
-
-
-
-
